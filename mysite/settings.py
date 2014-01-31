@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'polls',
+    'cmstest',
 
     'cms',  # django CMS itself
     'mptt',  # utilities for implementing a modified pre-order traversal tree
@@ -77,6 +78,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 CMS_TEMPLATES = (
     ('polls/plugin.html', 'Plugin'),
+    ('cmstest/hello_plugin.html', 'Hello Plugin'),
+    ('cmstest/cms_base.html', 'CMS Base'),
 )
 
 ROOT_URLCONF = 'mysite.urls'

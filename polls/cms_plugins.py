@@ -9,7 +9,7 @@ class PollPlugin(CMSPluginBase):
 	render_template = "polls/plugin.html"
 
 	def render(self, context, instance, placeholder):
-		conteext.update({'instance': instance})
+		context.update({'instance': instance})
 		return context
 
 plugin_pool.register_plugin(PollPlugin)
