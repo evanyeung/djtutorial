@@ -68,4 +68,4 @@ def vote(request, poll_id):
 		selected_choice.votes += 1
 		selected_choice.save()
 		#return HttpResponseRedirect to prevent data from being posted twide if user hits back button
-		return HttpResponseRedirect(reverse('polls:results', args=(p.id,)))
+		return HttpResponseRedirect(reverse('results', args=(p.id,)))

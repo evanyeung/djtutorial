@@ -1,6 +1,7 @@
 from django.db import models
 import datetime
 from django.utils import timezone
+from cms.models import CMSPlugin
 
 # Create your models here.
 class Poll(models.Model):
@@ -24,3 +25,9 @@ class Choice(models.Model):
 
 	def __unicode__(self):
 		return self.choice_text
+
+class PollPlugin(CMSPlugin):
+	poll = models.ForeignKey('Poll', related_name='plugins')
+
+	def __unicode__(self):
+		return self.poll.question
