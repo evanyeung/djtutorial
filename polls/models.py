@@ -24,3 +24,13 @@ class Choice(models.Model):
 
 	def __unicode__(self):
 		return self.choice_text
+
+from django.db import models
+from cms.models import CMSPlugin
+
+class PollPlugins(CMSPlugin):
+    poll = models.ForeignKey('polls.Poll', related_name='plugins')
+
+    def __unicode__(self):
+      return self.poll.question
+      
