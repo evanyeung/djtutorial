@@ -1,4 +1,10 @@
-{% load menu_tags %}
+{% load staticfiles %}
+{% load sekizai_tags %}
+
+{% addtoblock "css" %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+{% endaddtoblock %}
+{% render_block "css" %}
 
 <h1>{{ instance.poll.question }}</h1>
 

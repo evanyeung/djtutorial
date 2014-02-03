@@ -1,6 +1,11 @@
 {% load staticfiles %}
+{% load menu_tags %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<ul>
+	{% show_menu 0 100 0 100 %}
+</ul>
 
 {% if latest_poll_list %}
 	<ul>
