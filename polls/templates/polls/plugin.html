@@ -1,3 +1,5 @@
+{% load menu_tags %}
+
 <h1>{{ instance.poll.question }}</h1>
 
 <form action="{% url 'vote' instance.poll.id %}" method="post">

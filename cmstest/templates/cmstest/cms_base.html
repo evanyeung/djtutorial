@@ -1,6 +1,10 @@
 {% load cms_tags %}
+{% load menu_tags %}
 <html>
 	<body>
+		<ul>
+			{% show_menu 0 100 0 100 %}
+		</ul>
 		{% placeholder base_content %}
 	</body>
 </html>

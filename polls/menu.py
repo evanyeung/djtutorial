@@ -20,10 +20,10 @@ class PollsMenu(CMSAttachMenu):
 			# argument.
 			node = NavigationNode(
 				poll.question,
-				reverse('polls.views.detail', args=(poll.pk,)),
+				reverse('detail', args=(poll.pk,)),
 				poll.pk
 			)
-			nodes.appent(node)
+			nodes.append(node)
 		return nodes
 
 menu_pool.register_menu(PollsMenu)
